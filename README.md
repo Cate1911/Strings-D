@@ -72,7 +72,23 @@ texto = "12345"
 resultado = texto.isupper()
 print(resultado)  # Resultado: False
 ```
+**Referencias:** https://www.w3schools.com/python, https://thedataschools.com/python/strings, https://www.programiz.com/python-programming/methods/string.
+
 ## Procesar el archivo y extraer:
 + Cantidad de vocales.
 + Cantidad de consonantes.
 + Listado de las 50 palabras que más se repiten.
+
+Lo primero que hice fue asignarle una variable a mi archivo para poder traerlo a Visual. Cabe aclarar que puse una r antes de la ubicación de mi archivo (la cual se encuentra en comillas sencillas), esto, porque cuando copié la dirección de mi archivo, los slashes estaban invertidos, entonces, para que no me interprete como barras de escape, estoy indicando que es una cadena cruda, es decir, una cadena que se toma como un valor literal.
+
+Ahora, para abrir el archivo, utilicé el statement "with open()", el cual, al principio me pareció complicado para utilizar, sin embargo, después lo encontré muy útil cuando me explicaron todo en este <a href="https://elblogdelprogramador.com/posts/uso-correcto-del-statement-with-open-en-python-ejemplo-de-sintaxis/#gsc.tab=0">post</a>. Para este caso, sólo quería leer el archivo, por eso puse 'r' entre paréntesis y después de la variable que le asigné a mi archivo, así, todo lo que pusiera dentro de ese with se realizaría con mi archivo abierto.
+
+También, usé el ciclo for para que me recorriera cada caracter del archivo y me determinara si es una vocal (sólo si hace parte de la lista que creé) o si es una consonante(si es un caracter alfanumérico y además no se encuentra en la lista). Finalmente, me basé en un post de Stackoverflow para poder contar las palabras que más se repiten.
+
+![reto_12](https://github.com/Cate1911/Strings-D/assets/141857246/bf5b05ab-43eb-4050-8292-cd19719e9d58)
+
+<a href="https://es.stackoverflow.com/questions/442488/qu%C3%A9-significa-la-letra-r-precediendo-una-constante-de-cadena">Referencia de lo de la cadena cruda:**</a>
+
+<a href="https://es.stackoverflow.com/questions/444688/contar-caracteres-repetidos-en-una-cadena">El post que utilicé para guiarme en la última parte</a>
+
+**¡Muchas gracias por haber leído mi repo! y ya, creo que es uno de los retos que más me ha gustado, tal vez por lo de procesar el archivo y usar strings**
